@@ -1,5 +1,4 @@
 
-
 //Declaração de array de frutas
 let frutas = ["maçã", "banana", "laranja", "morango", "jambo"];
 
@@ -43,7 +42,11 @@ console.log("=============================================================");
 
 document.getElementById("btnRemoveFinal").addEventListener("click", ()=>{
 
+
+document.getElementById("btnRemoveFinal").addEventListener("click", ()=>{
+
 document.getElementById("btnRemoveFinal").addEventListener("click", () => {
+
 
     frutas.pop();
     addFrutas();
@@ -53,7 +56,11 @@ document.getElementById("btnRemoveFinal").addEventListener("click", () => {
 
 document.getElementById("btnRemoveInicio").addEventListener("click", ()=>{
 
+
+document.getElementById("btnRemoveInicio").addEventListener("click", ()=>{
+
 document.getElementById("btnRemoveInicio").addEventListener("click", () => {
+
 
     frutas.shift();
     addFrutas();
@@ -63,7 +70,11 @@ document.getElementById("btnRemoveInicio").addEventListener("click", () => {
 
 document.getElementById("OrdemA").addEventListener("click", ()=>{
 
+
+document.getElementById("OrdemA").addEventListener("click", ()=>{
+
 document.getElementById("OrdemA").addEventListener("click", () => {
+
 
     frutas.sort();
     addFrutas();
@@ -73,7 +84,11 @@ document.getElementById("OrdemA").addEventListener("click", () => {
 
 document.getElementById("Revert").addEventListener("click", ()=>{
 
+
+document.getElementById("Revert").addEventListener("click", ()=>{
+
 document.getElementById("Revert").addEventListener("click", () => {
+
 
     frutas.reverse();
     addFrutas();
@@ -83,13 +98,18 @@ document.getElementById("Revert").addEventListener("click", () => {
 
 document.getElementById("btnPesquisa").addEventListener("click", ()=>{
 
+document.getElementById("btnPesquisa").addEventListener("click", ()=>{
+
 document.getElementById("btnPesquisa").addEventListener("click", () => {
+
 
     pesquisaFruta(document.getElementById("idFruta").value);
     addFrutas();
 });
 
 //Sistema de remoção no Array com splice
+
+
 
 document.getElementById("btnRemover").addEventListener("click", ()=>{
 
@@ -114,6 +134,7 @@ function pesquisaFruta(fruta){
         return valorPesquisado;
     }else{
 
+
 document.getElementById("btnRemover").addEventListener("click", () => {
 
     let indiceDaFruta = pesquisaFruta(document.getElementById("idFruta").value);
@@ -135,6 +156,7 @@ function pesquisaFruta(fruta) {
         document.getElementById("itemFruta").innerHTML = frutas[valorPesquisado];
         return valorPesquisado;
     } else {
+
 
         document.getElementById("itemFruta").innerHTML = "Fruta não encontrada!";
         return -1;
