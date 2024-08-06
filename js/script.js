@@ -35,7 +35,7 @@ frutas.unshift("melão");
 console.log("=======================");
 
 // adicionando itens no HTML
-function adicionarFrutas() {
+function exibirListaFrutas() {
     let listaFrutas = document.getElementById("lista-frutas");
     listaFrutas.innerHTML = ""
     for (let fruta of frutas) {
@@ -46,7 +46,7 @@ function adicionarFrutas() {
 }
 // botão para a função
 let botaoAdicionarFrutas = document.getElementById("btn-adicionar-frutas");
-botaoAdicionarFrutas.addEventListener("click", adicionarFrutas);
+botaoAdicionarFrutas.addEventListener("click", exibirListaFrutas);
 
 console.log("=======================");
 
@@ -54,28 +54,28 @@ console.log("=======================");
 let botaoRemoverUltima = document.getElementById("btn-remover-ultima");
 botaoRemoverUltima.addEventListener("click", () => {
     frutas.pop();
-    adicionarFrutas();
+    exibirListaFrutas();
 });
 
 // botão remover primeiro item
 let botaoRemoverPrimeira = document.getElementById("btn-remover-primeira");
 botaoRemoverPrimeira.addEventListener("click", () => {
     frutas.shift();
-    adicionarFrutas();
+    exibirListaFrutas();
 })
 
 // botão ordem alfabética
 let botaoOrdemAlfabetica = document.getElementById("btn-ordem-alfabetica");
 botaoOrdemAlfabetica.addEventListener("click", () => {
     frutas.sort();
-    adicionarFrutas();
+    exibirListaFrutas();
 })
 
 // botão ordem reversa
 let botaoOrdemReversa = document.getElementById("btn-ordem-reversa");
 botaoOrdemReversa.addEventListener("click", () => {
     frutas.reverse();
-    adicionarFrutas();
+    exibirListaFrutas();
 })
 
 console.log("=======================");
@@ -95,7 +95,7 @@ function pesquisarFruta(fruta) {
 let botaoPesquisa = document.getElementById("btn-pesquisa");
 botaoPesquisa.addEventListener("click", () => {
     pesquisarFruta(document.getElementById("idFruta").value);
-    adicionarFrutas();
+    exibirListaFrutas();
 })
 
 console.log("=======================");
@@ -114,5 +114,5 @@ function removerFruta() {
 let botaoRemover = document.getElementById("btn-remover");
 botaoRemover.addEventListener("click", () => {
     removerFruta();
-    adicionarFrutas();
+    exibirListaFrutas();
 });
