@@ -31,7 +31,24 @@ for (let indice in aFrutas){
 
 console.log("====//====//====//====//====//====//====//====//====//====//====//====")
 
+//* Adicionar um item no array
+//No final com push()
+aFrutas.push("Abacaxi");
+//No ínicio com unshift()
+aFrutas.unshift("Melancia")
 
+function addFrutas() {
+    let elListaFrutas = document.getElementById("listaFrutas");
+    elListaFrutas.innerHTML = ""
+
+    for (let fruta of aFrutas) {
+        let item = document.createElement("li");
+        item.textContent = fruta;
+        elListaFrutas.appendChild(item);
+    }
+}
+
+document.getElementById("btnAddFrutas").addEventListener("click", addFrutas);
 
 
 
