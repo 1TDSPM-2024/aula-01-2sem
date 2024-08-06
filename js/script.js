@@ -68,12 +68,42 @@ document.getElementById("Revert").addEventListener("click", ()=>{
     addFrutas();
 });
 
+//Sistema de busca no Array com indexOf
+document.getElementById("btnPesquisa").addEventListener("click", ()=>{
+    pesquisaFruta(document.getElementById("idFruta").value);
+    addFrutas();
+});
+
+//Sistema de remoção no Array com splice
+document.getElementById("btnRemover").addEventListener("click", ()=>{
+
+    let indiceDaFruta = pesquisaFruta(document.getElementById("idFruta").value);
+
+    if(indiceDaFruta >= 0){
+        frutas.splice(indiceDaFruta,1);
+    }else{
+        document.getElementById("itemFruta").innerHTML = "ITEM INEXISTENTE!";
+    }
+    addFrutas();
+});
 
 
 
 
+function pesquisaFruta(fruta){
+    let valorPesquisado = frutas.indexOf(document.getElementById("idFruta").value);
+    if(valorPesquisado >= 0){
+        document.getElementById("itemFruta").innerHTML = frutas[valorPesquisado];
+        return valorPesquisado;
+    }else{
+        document.getElementById("itemFruta").innerHTML = "Fruta não encontrada!";
+        return -1;
+    }
+}
 
-//Criar função para adicionar o arra a lista de frutas no HTML
+
+
+//Criar função para adicionar o array a lista de frutas no HTML
 function addFrutas(){
     let listaFrutas = document.getElementById("lista-frutas");
     listaFrutas.innerHTML = "";
