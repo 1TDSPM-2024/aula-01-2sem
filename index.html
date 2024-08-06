@@ -2,11 +2,35 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=devide-width, inicial-scale=1.0" />
-    <script src="./js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemplo-1</title>
+
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <h1>Manipulação de Arrays</h1>
+    <button id="btnAddFrutas">Add-Frutas</button>
+    <button id="btnRemoveInicio">Primeira Fruta</button>
+    <button id="btnRemoveFinal">Última Fruta</button>
+    <button id="OrdemA">Ordem Alfabética</button>
+    <button id="Revert">Reverter</button>
+    <div>
+      <form>
+        <div>
+          <label for="idFruta">Nome da Fruta</label>
+          <input type="text" name="fruta" id="idFruta" />
+        </div>
+        <div>
+          <label for="" id="itemFruta"></label>
+        </div>
+        <div>
+          <button type="button" id="btnPesquisa">Pesquisar</button>
+          <button type="button" id="btnRemover">Remover</button>
+        </div>
+      </form>
+    </div>
+
+    <!--criando lista que vai receber os elementos do array de frutas -->
+    <ul id="lista-frutas"></ul>
   </body>
 </html>
