@@ -79,3 +79,40 @@ botaoOrdemReversa.addEventListener("click", () => {
 })
 
 console.log("=======================");
+
+// sistema de busca com indexOf
+function pesquisarFruta(fruta) {
+    let valorPesquisado = frutas.indexOf(fruta);
+    if (valorPesquisado >= 0) {
+        document.getElementById("itemFruta").innerHTML = frutas[valorPesquisado];
+        return valorPesquisado;
+    } else {
+        document.getElementById("itemFruta").innerHTML = "Fruta não encontrada.";
+        return -1;
+    }
+}
+
+let botaoPesquisa = document.getElementById("btn-pesquisa");
+botaoPesquisa.addEventListener("click", () => {
+    pesquisarFruta(document.getElementById("idFruta").value);
+    adicionarFrutas();
+})
+
+console.log("=======================");
+
+// sistema de remoção com splice
+function removerFruta() {
+    let indiceDaFruta = pesquisarFruta(document.getElementById("idFruta").value);
+
+    if (indiceDaFruta >= 0) {
+        frutas.splice(indiceDaFruta, 1);
+    } else {
+        document.getElementById("itemFruta").innerHTML = "ITEM INEXISTENTE!";
+    }
+}
+
+let botaoRemover = document.getElementById("btn-remover");
+botaoRemover.addEventListener("click", () => {
+    removerFruta();
+    adicionarFrutas();
+});
